@@ -13,7 +13,7 @@ func Bastien() {
 * Exemple d'instanciation d'une ville
 */
 func InstanceVille(){
-	reims := ville.New("Reims", false, 20)
+	reims := ville.New("Reims")
 
 	fmt.Println(reims.Nom)
 }
