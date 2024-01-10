@@ -1,5 +1,5 @@
 package bastien
 
-func Bastien() {
+func dijsktra() {
 
 }
