@@ -5,9 +5,8 @@ package ville
  */
 
 type Ville struct {
-	Nom      string
+	Nom		 string
 	Visitee  bool
-	Distance int
 }
 
 /**
@@ -15,6 +14,13 @@ type Ville struct {
 * @param Nom : nom de la ville
 */
 func New(Nom string) Ville {
-	ville := Ville{Nom, false, 999999}
+	ville := Ville{Nom, false}
 	return ville
+}
+
+/**
+* Méthode de classe
+*/
+func (v Ville) IsVisited() bool {
+	return v.Visitee
 }
