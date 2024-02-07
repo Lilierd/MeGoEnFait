@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"project/bastien/activity"
 	"strings"
+
+	"github.com/Lilierd/MeGoEnFait/project/bastien/activity"
 )
 
 func GetPERTData(path string) [][]string {
@@ -44,7 +45,7 @@ func GetPERTArray(data [][]string) []activity.Activity {
 			parentsString := strings.Split(element[2], ",")
 			for _, parent := range parentsString {
 				for _, activite := range tab {
-					if(parent == activite.Name) {
+					if parent == activite.Name {
 						parents = append(parents, activite)
 					}
 				}
@@ -60,5 +61,5 @@ func GetPERTArray(data [][]string) []activity.Activity {
 }
 
 func ResolvePERT([]activity.Activity) {
-	
+
 }

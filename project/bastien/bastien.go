@@ -2,8 +2,9 @@ package bastien
 
 import (
 	"fmt"
-	ville "project/bastien/ville"
 	"strconv"
+
+	ville "github.com/Lilierd/MeGoEnFait/project/bastien/ville"
 )
 
 func Bastien() {
@@ -12,7 +13,7 @@ func Bastien() {
 
 /**
 * Exemple d'instanciation d'une ville
-*/
+ */
 func InstanceVille() ville.Ville {
 	reims := ville.New("Reims")
 

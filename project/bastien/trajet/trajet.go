@@ -1,7 +1,7 @@
 package trajet
 
 import (
-	ville "project/bastien/ville"
+	ville "github.com/Lilierd/MeGoEnFait/project/bastien/ville"
 )
 
 type Trajet struct {
@@ -31,4 +31,8 @@ func (t Trajet) GetVille2() ville.Ville {
 
 func (t Trajet) GetDistance() int {
 	return t.distance
+}
+
+func (t Trajet) SetDistance(distance int) {
+	t.distance = distance
 }
