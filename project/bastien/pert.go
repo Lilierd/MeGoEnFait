@@ -60,6 +60,24 @@ func GetPERTArray(data [][]string) []activity.Activity {
 	return tab
 }
 
-func ResolvePERT([]activity.Activity) {
+func ResolvePERT(activites []activity.Activity) string {
+	var result string
 
+	result = ResolvePERTactivite(activites[len(activites) -1])
+
+	return result
+}
+
+func ResolvePERTactivite(activite activity.Activity) string {
+	var result string
+
+	if(activite.Parents == nil) {
+		//Gestion de A
+	} else {
+		for _, parent := range activite.Parents {
+			result += ResolvePERTactivite(parent)
+		}
+	}
+
+	return result
 }
